@@ -5,10 +5,13 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import { IoIosArrowForward, IoIosArrowRoundForward } from "react-icons/io";
 
 export default function Home() {
+  const imageurls={
+    homepageSliderImage:"https://test.com"
+  }
   return (
     <main className="min-h-screen ">
-      <section className="relative w-full h-screen">
-        <div className="absolute inset-0 w-full h-full">
+      <section className="relative w-full h-[650px]">
+        <div className="absolute inset-0 w-full">
           <Image
             src="/image/Rectangle5788.png"
             layout="fill"
@@ -42,7 +45,7 @@ export default function Home() {
               </p>
               <button
                 type="button"
-                className="mx-auto text-white bg-red-500 font-medium text-sm px-5 py-2.5 md:mt-5 mt-1 rounded-tr-lg rounded-b-lg"
+                className="mx-auto text-white bg-red-500 font-medium text-sm px-5 mb-5 py-2.5 md:mt-5 mt-3 rounded-tr-lg rounded-b-lg"
               >
                 Get Started
               </button>
@@ -54,34 +57,35 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="absolute w-4/5 md:-bottom-32 -bottom-[400px] left-1/2 transform -translate-x-1/2 ">
-          <div className="grid md:grid-cols-3  rounded-xl grid-cols-1 shadow-xl bg-white">
-            <div className="md:flex block">
-              <div className="px-12   my-5">
-                <div className="relative w-10 h-10  items-center flex justify-center">
-                  <Image
+        <div className="absolute md:w-4/5 w:3/5 lg:-bottom-48 md:-bottom-20 -bottom-[274px] left-1/2 transform -translate-x-1/2 ">
+          <div className="grid md:grid-cols-3  rounded-xl grid-cols-1 shadow-md bg-white">
+            <div className="md:flex block md:px-0 px-16 lg:py-5">
+              <div className="  my-5 md:px-8 px-0">
+              <div className="relative w-6 h-6 md:w-8 md:h-8 items-center flex justify-center">
+              <Image
                     src="/image/icons/image65.png"
                     fill
+                    unoptimized
                     alt="Picture of the author"
                     className="object-cover"
                   />
                 </div>
 
-                <h5 className="mb-2 mt-3 text-xl font-bold tracking-tight text-[#04374B]">
+                <h5 className="mb-2 mt-2 lg:mt-6  lg:text-xl text-xs font-semibold  text-[#04374B]">
                   Quality Driven
                 </h5>
-                <p className="mb-3 text-sm font-normal text-[#365F6F] leading-6">
+                <p className="mb-3 lg:text-sm text-[10px] font-normal text-[#365F6F] lg:leading-6 leading-3">
                   We always deliver the best quality and performance for both
                   our products and services.
                 </p>
               </div>
-              <div className=" md:border-r-2 border-b-2 border-[#CDCDCD] sm:mx-12 md:mx-0 sm:my-0  md:my-10"></div>
+              <div className=" md:border-r-2 border-b-2 border-[#CDCDCD] mx-2 md:mx-0 my-0  md:my-14"></div>
             </div>
 
-            <div className="md:flex block">
-              <div className="px-12   my-5">
-                <div className="relative w-10 h-10  items-center flex justify-center">
-                  <Image
+            <div className="md:flex block lg:px-0 px-16 lg:py-5">
+              <div className="  my-5 lg:px-8 px-0">
+              <div className="relative w-6 h-6 md:w-8 md:h-6  items-center flex justify-center">
+              <Image
                     src="/image/icons/image66.png"
                     fill
                     alt="Picture of the author"
@@ -89,18 +93,18 @@ export default function Home() {
                   />
                 </div>
 
-                <h5 className="mb-2 mt-3 text-xl font-bold tracking-tight text-[#04374B]">
+                <h5 className="mb-2 mt-2 lg:mt-6 lg:text-xl text-xs font-semibold  text-[#04374B]">
                 Corporate Training
                 </h5>
-                <p className="mb-3 text-sm font-normal text-[#365F6F] leading-6">
-                We always deliver the best quality and performance for both our products and services.
-                </p>
+                <p className="mb-3 lg:text-sm text-[8px] font-normal text-[#365F6F] lg:leading-6 leading-3">
+                We can tailor our courses to your needs and create unique programmer that may include various workshops                </p>
               </div>
-              <div className=" md:border-r-2 border-b-2 border-[#CDCDCD] sm:mx-12 md:mx-0 sm:my-0  md:my-10"></div>
-            </div>
-            <div className="flex">
-              <div className="px-12   my-5">
-                <div className="relative w-10 h-10  items-center flex justify-center">
+
+              <div className=" md:border-r-2 border-b-2 border-[#CDCDCD] mx-2 md:mx-0 my-0  md:my-14"></div>
+              </div>
+            <div className="md:flex block lg:px-0 px-16 lg:py-5">
+            <div className="  my-5 lg:px-8 px-0">
+                <div className="relative w-6 h-6 md:w-8 md:h-6  items-center flex justify-center">
                   <Image
                     src="/image/icons/image67.png"
                     fill
@@ -109,10 +113,10 @@ export default function Home() {
                   />
                 </div>
 
-                <h5 className="mb-2 mt-3 text-xl font-bold tracking-tight text-[#04374B]">
+                <h5 className="mb-2 mt-2 lg:mt-6 lg:text-xl text-xs font-semibold  text-[#04374B]">
                 Global Sourcing
                 </h5>
-                <p className="mb-3 text-sm font-normal text-[#365F6F] leading-6">
+                <p className="mb-3 lg:text-sm text-[8px] font-normal text-[#365F6F] lg:leading-6 leading-3">
                 We always deliver the best quality and performance for both our products and services.
                 </p>
               </div>
@@ -123,11 +127,11 @@ export default function Home() {
       </section>
 
       {/* course */}
-      <section className="lg:px-[80px] px-[34px] sm:px-[47px] md:mt-48 mt-[450px] mb-10">
+      <section className="lg:px-[80px] px-[34px] sm:px-[47px] md:mt-32  lg:mt-56 mt-72  mb-10">
         <div className="flex items-center">
           <div className="w-5 border-t-2 border-red-500 "></div>
 
-          <span className="text-lg text-red-500 ms-3">Our Coursees</span>
+          <span className="lg:text-lg md:text-sm text-[8px] text-red-500 ms-3">OUR COURSE</span>
         </div>
 
         <div className="flex items-center">
@@ -149,7 +153,7 @@ export default function Home() {
         </div>
 
         <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 mt-5">
-          <div className="relative p-6 bg-white shadow rounded-lg border border-gray-300">
+          <div className="relative p-6 ms-6 bg-white  rounded-lg border border-gray-300">
             <div className="absolute -left-6  py-7 px-4  border-0   bg-[url('/image/Polygon.png')] bg-cover bg-center">
               <div className="relative w-[20px] h-[20px]   ">
                 <Image
@@ -179,7 +183,7 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="relative p-6 bg-white shadow rounded-lg border border-gray-300">
+          <div className="relative p-6 ms-6 bg-white shadow rounded-lg border border-gray-300">
           <div className="absolute -left-6  py-7 px-4  border-0   bg-[url('/image/Polygon.png')] bg-cover bg-center">
           <div className="relative w-[20px] h-[20px]   ">
                 <Image
@@ -209,7 +213,7 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="relative p-6 bg-white shadow rounded-lg border border-gray-300">
+          <div className="relative p-6 ms-6 bg-white shadow rounded-lg border border-gray-300">
           <div className="absolute -left-6  py-7 px-4  border-0   bg-[url('/image/Polygon.png')] bg-cover bg-center">
           <div className="relative w-[20px] h-[20px]   ">
                 <Image
@@ -238,7 +242,7 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="relative p-6 bg-white shadow rounded-lg border border-gray-300">
+          <div className="relative p-6 ms-6 bg-white shadow rounded-lg border border-gray-300">
           <div className="absolute -left-6  py-7 px-4  border-0   bg-[url('/image/Polygon.png')] bg-cover bg-center">
           <div className="relative w-[20px] h-[20px]   ">
                 <Image
@@ -268,7 +272,7 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="relative p-6 bg-white shadow rounded-lg border border-gray-300">
+          <div className="relative p-6 ms-6 bg-white shadow rounded-lg border border-gray-300">
           <div className="absolute -left-6  py-7 px-4  border-0   bg-[url('/image/Polygon.png')] bg-cover bg-center">
           <div className="relative w-[20px] h-[20px]   ">
                 <Image
@@ -299,7 +303,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative p-6 bg-white shadow rounded-lg border border-gray-300">
+          <div className="relative p-6 ms-6 bg-white shadow rounded-lg border border-gray-300">
              <div className="absolute -left-6  py-7 px-4  border-0   bg-[url('/image/Polygon.png')] bg-cover bg-center">
               <div className="relative w-[20px] h-[20px]   ">
                 <Image
@@ -375,10 +379,10 @@ export default function Home() {
           </div>
 
           <div className=" flex lg:block">
-            <h2 className="lg:text-3xl text-2xl lg:font-semibold font-medium lg:w-full w-1/2">
+            <div className="lg:text-3xl flex-1 md:text-2xl text-xl lg:font-semibold font-medium lg:w-full w-1/2">
               OUR REAL COMMITMENT REACHES BEYOND GAS & OIL COMPANY.
-            </h2>
-            <div className="text-red-500 lg:hidden  flex justify-end w-1/2 pe-5">
+            </div>
+            <div className="text-red-500 lg:hidden   flex justify-end w-1/5 pe-5">
               <span>
                 <IoIosArrowForward className="text-xl" />
               </span>
@@ -447,7 +451,7 @@ export default function Home() {
         </div>
         <div className="grid lg:grid-cols-4 gap-5 sm:grid-cols-3">
           <div className=" px-6 bg-[#F7F7F7]   rounded-xl shadow my-5">
-            <div className="min-h-52">
+         
             <div className="w-10 h-10 bg-[#04374B] items-center flex justify-center">
               <Image
                 src="/image/icons/Frame.png"
@@ -466,8 +470,6 @@ export default function Home() {
               From applied literature to educational resources, we have a lot of
               textbooks to offer.
             </p>
-            </div>
-          
             <Link
               href="#"
               className="inline-flex items-center   py-2 text-sm font-medium text-center mb-8 "
@@ -475,10 +477,12 @@ export default function Home() {
               Read more
               <IoIosArrowRoundForward className="text-2xl ms-1" />
             </Link>
+          
+           
           </div>
 
           <div className=" px-6 bg-[#F7F7F7]   rounded-xl shadow my-5">
-          <div className="min-h-52">
+        
             <div className="w-10 h-10 bg-[#04374B] items-center flex justify-center">
               <Image
                 src="/image/icons/Frame1.png"
@@ -497,7 +501,7 @@ export default function Home() {
               From applied literature to educational resources, we have a lot of
               textbooks to offer.
             </p>
-</div>
+
             <Link
               href="#"
               className="inline-flex items-center  py-2 text-sm font-medium text-center mb-10 "
@@ -507,7 +511,7 @@ export default function Home() {
             </Link>
           </div>
           <div className=" px-6 bg-[#F7F7F7]   rounded-xl shadow my-5">
-          <div className="min-h-52 lg:min-h-60">
+        
             <div className="w-10 h-10 bg-[#04374B] items-center flex justify-center">
               <Image
                 src="/image/icons/Frame2.png"
@@ -526,7 +530,7 @@ export default function Home() {
               From applied literature to educational resources, we have a lot of
               textbooks to offer.
             </p>
-            </div>
+           
             <Link
               href="#"
               className="inline-flex items-center  py-2 text-sm font-medium text-center mb-10 "
@@ -536,7 +540,7 @@ export default function Home() {
             </Link>
           </div>
           <div className=" px-6 bg-[#F7F7F7]   rounded-xl shadow my-5">
-          <div className="min-h-52 lg:min-h-60">
+          
             <div className="w-10 h-10 bg-[#04374B] items-center flex justify-center">
               <Image
                 src="/image/icons/Frame3.png"
@@ -555,7 +559,7 @@ export default function Home() {
               From applied literature to educational resources, we have a lot of
               textbooks to offer.
             </p>
-            </div>
+           
             <Link
               href="#"
               className="inline-flex items-center  py-2 text-sm font-medium text-center mb-10"
@@ -849,8 +853,8 @@ export default function Home() {
           </form>
         </div>
       </section>
-      <section className="lg:px-[80px] px-[34px] sm:px-[47px] grid sm:grid-cols-5 grid-cols-2 gap-5 py-10">
-        <div className="relative lg:w-[160px] lg:h-[48px] w-[105px]  md:h-[38px]  h-[30px] ">
+      <section className="lg:px-[80px]   px-[34px] sm:px-[47px] grid sm:grid-cols-5 grid-cols-2 gap-5 py-10">
+        <div className="relative flex justify-center  items-center lg:w-[160px] lg:h-[48px] w-[105px]  md:h-[38px]  h-[30px] ">
           <Image
             src="/image/Page-1.png"
             fill

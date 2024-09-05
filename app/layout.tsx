@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Manrope, Plus_Jakarta_Sans } from "next/font/google";
 import { IoReorderThree, IoLocationOutline } from "react-icons/io5";
 import { MdMailOutline } from "react-icons/md";
 import Link from "next/link";
@@ -7,7 +7,11 @@ import Image from "next/image";
 import "./globals.css";
 import { FiPhone } from "react-icons/fi";
 import { FaArrowRight } from "react-icons/fa6";
-const inter = Inter({ subsets: ["latin"] });
+const plusChakarthaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  preload: false,
+});
+const manRopr = Manrope({ subsets: ["latin"], preload: false });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,18 +25,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <nav className="bg-white border border-gray-200  h-[93px] md:h-[128px]  sm:h-[130px]  md:py-[40px] py-[28px]  sm:py-[42px] md:px-[100px] px-[34px] sm:px-[45px]  shadow">
-          <div className="container flex flex-nowrap justify-between items-center  h-10">
-            <Link href="/" className="flex items-center relative ">
+      <body className={plusChakarthaSans.className}>
+        <nav className="bg-white flex justify-center   lg:h-[60px] md:h-[54px]  h-[50px] md:py-2 py-1   lg:px-[100px]  md:px-[42px] px-[34px]">
+          <div className="container  flex flex-nowrap justify-between items-center  ">
+            <div className=" w-[60px] h-[30px] relative ">
               <Image
                 src="/image/icons/logo1.png"
-                width={72}
-                height={48}
-                className=""
+                 fill
+                className="object cover"
                 alt="Picture of the author"
               />
-            </Link>
+            </div>
 
             <div className="flex  items-center">
               <button
@@ -45,10 +48,10 @@ export default function RootLayout({
             </div>
 
             <div
-              className={`w-full md:block md:w-auto hidden `}
-              id="mobile-menu"
+              className="flex-1 md:block md:w-auto hidden "
+         
             >
-              <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+              <ul className="flex flex-col mt-4 md:flex-row md:justify-end md:space-x-8 md:mt-0 md:text-sm md:font-medium">
                 <li className="flex justify-between">
                   <Link
                     href="/contact"
@@ -90,10 +93,14 @@ export default function RootLayout({
             </div>
           </div>
         </nav>
-        {children}
-        <footer className="w-full  bg-[#022837]  lg:px-[80px] px-[34px] sm:px-[47px] ">
+        <div className="flex justify-center">
+          <div className="max-w-[1536px]">{children}</div>
+        </div>
+
+
+<footer className="w-full   bg-[#022837]  lg:px-[80px] px-[34px] sm:px-[47px] ">
           <div className="container  flex   w-full  lg:flex-row flex-col  py-24   md:items-start ">
-           <div className="flex md:justify-between  flex-col md:flex-row lg:flex-col w-full  lg:w-72 lg:mx-0 items-center md:items-start">
+            <div className="flex md:justify-between  flex-col md:flex-row lg:flex-col w-full  lg:w-72 lg:mx-0 items-center md:items-start">
               <Link href={""}>
                 <Image
                   src="/image/icons/sticky-logo1.png"
@@ -117,83 +124,129 @@ export default function RootLayout({
               </div>
             </div>
             <div className="flex flex-wrap md:flex-nowrap text-center justify-between md:ms-8 ms:0 w-full mt-5  lg:mt-0  md:text-left">
-            <div className="w-full px-4 ">
-              <h2 className="mb-3 lg:text-xl sm:text-lg text-lg font-medium text-white ">About</h2>
-              <nav className="mb-10 list-none lg:text-lg   text-sm">
-                <li className="mt-3">
-                  <Link href={'#'} className="text-[#CFCFCF] cursor-pointer  ">Our Story</Link>
-                </li>
-                <li className="mt-3">
-                <Link href={'#'} className="text-[#CFCFCF] cursor-pointer ">Treatments Safer</Link>
-                </li>
-                <li className="mt-3">
-                <Link href={'#'} className="text-[#CFCFCF] cursor-pointer  ">Journal</Link>
-                </li>
-                <li className="mt-3">
-                <Link href={'#'} className="text-[#CFCFCF] cursor-pointer ">Candles</Link>
-                </li>
-              </nav>
-            </div>
-            <div className="w-full px-4 ">
-              <h2 className="mb-3 lg:text-xl sm:text-lg text-lg font-medium text-white  ">Company</h2>
-         
+              <div className="w-full px-4 ">
+                <h2 className="mb-3 lg:text-xl sm:text-lg text-lg font-medium text-white ">
+                  About
+                </h2>
+                <nav className="mb-10 list-none lg:text-lg   text-sm">
+                  <li className="mt-3">
+                    <Link
+                      href={"#"}
+                      className="text-[#CFCFCF] cursor-pointer  "
+                    >
+                      Our Story
+                    </Link>
+                  </li>
+                  <li className="mt-3">
+                    <Link href={"#"} className="text-[#CFCFCF] cursor-pointer ">
+                      Treatments Safer
+                    </Link>
+                  </li>
+                  <li className="mt-3">
+                    <Link
+                      href={"#"}
+                      className="text-[#CFCFCF] cursor-pointer  "
+                    >
+                      Journal
+                    </Link>
+                  </li>
+                  <li className="mt-3">
+                    <Link href={"#"} className="text-[#CFCFCF] cursor-pointer ">
+                      Candles
+                    </Link>
+                  </li>
+                </nav>
+              </div>
+              <div className="w-full px-4 ">
+                <h2 className="mb-3 lg:text-xl sm:text-lg text-lg font-medium text-white  ">
+                  Company
+                </h2>
 
-              <nav className="mb-10 list-none hidden md:block lg:text-lg   text-sm">
-                <li className="mt-3">
-                  <Link href={'#'} className="text-[#CFCFCF] cursor-pointer ">About</Link>
-                </li>
-                <li className="mt-3">
-                <Link href={'#'} className="text-[#CFCFCF] cursor-pointer ">Contact</Link>
-                </li>
-                <li className="mt-3">
-                <Link href={'#'} className="text-[#CFCFCF] cursor-pointer ">Products</Link>
-                </li>
-                <li className="mt-3">
-                <Link href={'#'} className="text-[#CFCFCF] cursor-pointer ">Privacy</Link>
-                </li>
-              </nav>
-            </div>
-            <div className="w-full px-4 ">
-              <h2 className="mb-3 lg:text-xl sm:text-lg text-lg font-medium text-white  ">Help</h2>
-              <nav className="mb-10 list-none  hidden md:block lg:text-lg  md:text-md text-sm">
-                <li className="mt-3">
-                  <Link href={'#'} className="text-[#CFCFCF] cursor-pointer ">FAQs</Link>
-                </li>
-                <li className="mt-3">
-                <Link href={'#'} className="text-[#CFCFCF] cursor-pointer ">Terms of service</Link>
-                </li>
-                <li className="mt-3">
-                <Link href={'#'} className="text-[#CFCFCF] cursor-pointer ">Cookies</Link>
-                </li>
-                <li className="mt-3">
-                <Link href={'#'} className="text-[#CFCFCF] cursor-pointer ">Privacy</Link>
-                </li>
-              </nav>
-            </div>
-            <div className="w-full px-4 ">
-              <h2 className="mb-3 lg:text-xl sm:text-lg text-lg font-medium text-white  ">Social Media</h2>
-              <nav className="mb-10 list-none  hidden md:block lg:text-lg   text-sm">
-                <li className="mt-3">
-                  <Link href={'#'} className="text-[#CFCFCF] cursor-pointer ">Facebook</Link>
-                </li>
-                <li className="mt-3">
-                <Link href={'#'} className="text-[#CFCFCF] cursor-pointer  ">Instagram</Link>
-                </li>
-                <li className="mt-3">
-                <Link href={'#'} className="text-[#CFCFCF] cursor-pointer ">LinkedIn</Link>
-                </li>
-               
-              </nav>
-            </div>
-          
+                <nav className="mb-10 list-none hidden md:block lg:text-lg   text-sm">
+                  <li className="mt-3">
+                    <Link href={"#"} className="text-[#CFCFCF] cursor-pointer ">
+                      About
+                    </Link>
+                  </li>
+                  <li className="mt-3">
+                    <Link href={"#"} className="text-[#CFCFCF] cursor-pointer ">
+                      Contact
+                    </Link>
+                  </li>
+                  <li className="mt-3">
+                    <Link href={"#"} className="text-[#CFCFCF] cursor-pointer ">
+                      Products
+                    </Link>
+                  </li>
+                  <li className="mt-3">
+                    <Link href={"#"} className="text-[#CFCFCF] cursor-pointer ">
+                      Privacy
+                    </Link>
+                  </li>
+                </nav>
+              </div>
+              <div className="w-full px-4 ">
+                <h2 className="mb-3 lg:text-xl sm:text-lg text-lg font-medium text-white  ">
+                  Help
+                </h2>
+                <nav className="mb-10 list-none  hidden md:block lg:text-lg  md:text-md text-sm">
+                  <li className="mt-3">
+                    <Link href={"#"} className="text-[#CFCFCF] cursor-pointer ">
+                      FAQs
+                    </Link>
+                  </li>
+                  <li className="mt-3">
+                    <Link href={"#"} className="text-[#CFCFCF] cursor-pointer ">
+                      Terms of service
+                    </Link>
+                  </li>
+                  <li className="mt-3">
+                    <Link href={"#"} className="text-[#CFCFCF] cursor-pointer ">
+                      Cookies
+                    </Link>
+                  </li>
+                  <li className="mt-3">
+                    <Link href={"#"} className="text-[#CFCFCF] cursor-pointer ">
+                      Privacy
+                    </Link>
+                  </li>
+                </nav>
+              </div>
+              <div className="w-full px-4 ">
+                <h2 className="mb-3 lg:text-xl sm:text-lg text-lg font-medium text-white  ">
+                  Social Media
+                </h2>
+                <nav className="mb-10 list-none  hidden md:block lg:text-lg   text-sm">
+                  <li className="mt-3">
+                    <Link href={"#"} className="text-[#CFCFCF] cursor-pointer ">
+                      Facebook
+                    </Link>
+                  </li>
+                  <li className="mt-3">
+                    <Link
+                      href={"#"}
+                      className="text-[#CFCFCF] cursor-pointer  "
+                    >
+                      Instagram
+                    </Link>
+                  </li>
+                  <li className="mt-3">
+                    <Link href={"#"} className="text-[#CFCFCF] cursor-pointer ">
+                      LinkedIn
+                    </Link>
+                  </li>
+                </nav>
+              </div>
             </div>
           </div>
           <div className="border-[#4D6873] border-t-2 py-5">
             <p className="text-sm text-[#CFCFCF] capitalize text-center">
-              © 2024 united education. All right reserved.{" "}
+              © 2024 united education. All right reserved.
             </p>
           </div>
         </footer>
+
+       
       </body>
     </html>
   );
