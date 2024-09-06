@@ -3,66 +3,72 @@ import Link from "next/link";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
 import { IoIosArrowForward, IoIosArrowRoundForward } from "react-icons/io";
+import {
+  IoArrowBack,
+  IoArrowBackOutline,
+  IoArrowForward,
+} from "react-icons/io5";
 
 export default function Home() {
-  const imageurls={
-    homepageSliderImage:"https://test.com"
-  }
+  const imageurls = {
+    homepageSliderImage: "https://test.com",
+  };
   return (
     <main className="min-h-screen ">
-      <section className="relative w-full h-[650px]">
-        <div className="absolute inset-0 w-full">
+      <section className="relative w-full md:h-[650px] h-[550px]">
+        <div className="absolute inset-0 ">
           <Image
             src="/image/Rectangle5788.png"
             layout="fill"
-            objectFit="cover"
+          
             alt="Picture of the author"
-            className="object-cover"
+            className=""
           />
         </div>
-        <div className="relative flex h-full items-center justify-center bg-opacity-50 w-full mx-auto">
-          <div className="flex items-center justify-center w-full">
-            <div className="w-1/4 text-white flex justify-center">
-              <FaArrowLeft className="lg:text-2xl text-xl" />
+        <div className="relative flex h-full items-center justify-center  w-full ">
+          <div className="flex items-center  w-full">
+            <div className="lg:w-1/4 sm:w-1/6 w-1/12 text-white   flex md:ps-20 ps-6">
+              <IoArrowBackOutline className="lg:text-3xl text-xl" />
             </div>
 
-            <div className="text-center text-white w-2/4 lg:mx-10 mx-0">
-              <div className="flex items-center justify-center">
-                <div className="w-5 border-t-2 border-white"></div>
+            <div className="text-center text-white flex-1  ">
+              <div className="flex items-center justify-center ">
+                <div className="md:w-10 w-16 md:border-t border-t-2 border-white"></div>
 
-                <span className="lg:text-lg text-sm text-[#BDBDBE] ms-3">
-                  Welcome to United Education
+                <span className="lg:text-[18px] md:text-[12px] text-[10px] text-white font-normal mx-3  leading-[50px] ">
+                  WELCOME TO UNITED EDUCATION
                 </span>
 
-                <div className="w-5 border-t-2 border-white"></div>
+                <div className="md:w-10 w-16 md:border-t border-t-2 border-white"></div>
               </div>
-              <h2 className="lg:text-4xl md:text-3xl text-xl font-bold mb-4">
+              <h2 className="lg:text-[40px] md:text-[27px] text-[22px] font-bold md:leading-[40px] lg:leading-[50px] ">
                 World Class Training Solutions for Professionals in the Oil and
                 Gas Industries
               </h2>
-              <p className="lg:text-lg text-sm text-[#BDBDBE]">
+
+              <p className="lg:text-[18px] font-normal text-sm text-[#BDBDBE]  leading-[50px] ">
                 Learn how you can grow your knowledge and advance your career.
               </p>
               <button
                 type="button"
-                className="mx-auto text-white bg-red-500 font-medium text-sm px-5 mb-5 py-2.5 md:mt-5 mt-3 rounded-tr-lg rounded-b-lg"
+                className="mx-auto text-white bg-[#DC272F] font-medium lg:text-lg md:text-base text-sm md:px-8 px-10 py-2 lg:px-6  lg:py-4 mt-3 mb-5 rounded-tr-lg rounded-b-lg"
               >
                 Get Started
               </button>
             </div>
 
-            <div className="w-1/4 text-white flex justify-center">
-              <FaArrowRight className="lg:text-2xl text-xl" />
+            <div className="lg:w-1/4 sm:w-1/6 w-1/12 text-white   flex justify-end md:pe-20 pe-6">
+              <IoArrowForward className="lg:text-3xl text-xl" />
             </div>
           </div>
         </div>
 
-        <div className="absolute md:w-4/5 w:3/5 lg:-bottom-48 md:-bottom-20 -bottom-[274px] left-1/2 transform -translate-x-1/2 ">
-          <div className="grid md:grid-cols-3  rounded-xl grid-cols-1 shadow-md bg-white">
-            <div className="md:flex block md:px-0 px-16 lg:py-5">
-              <div className="  my-5 md:px-8 px-0">
-              <div className="relative w-6 h-6 md:w-8 md:h-8 items-center flex justify-center">
-              <Image
+        <div className="absolute md:w-4/5 w-4/5 lg:-bottom-40 md:-bottom-12 -bottom-[320px] left-1/2 transform -translate-x-1/2 ">
+          <div className="grid md:grid-cols-3  rounded-xl grid-cols-1 shadow-md bg-white md:px-0 sm:px-20 px-5  md:py-5 py-0">
+            <div className="md:flex block md:px-0  lg:py-5">
+              <div className=" md:px-10 md:py-0 py-4 flex flex-col">
+                <div className="relative w-6 h-6 md:w-8 md:h-8 items-center flex justify-center">
+                  <Image
                     src="/image/icons/image65.png"
                     fill
                     unoptimized
@@ -71,21 +77,21 @@ export default function Home() {
                   />
                 </div>
 
-                <h5 className="mb-2 mt-2 lg:mt-6  lg:text-xl text-xs font-semibold  text-[#04374B]">
+                <h5 className="lg:text-[20px] md:text-[16px] text-[14px] lg:leading-[55px] md:leading-[45px] leading-[35px]  font-semibold  text-[#04374B]">
                   Quality Driven
                 </h5>
-                <p className="mb-3 lg:text-sm text-[10px] font-normal text-[#365F6F] lg:leading-6 leading-3">
+                <p className=" lg:text-sm md:text-[9px] text-[12px] font-normal text-[#365F6F] lg:leading-6 md:leading-4">
                   We always deliver the best quality and performance for both
                   our products and services.
                 </p>
               </div>
-              <div className=" md:border-r-2 border-b-2 border-[#CDCDCD] mx-2 md:mx-0 my-0  md:my-14"></div>
+              <div className=" md:border-r-2 border-b-2 border-[#CDCDCD] mx-2 md:mx-0 my-0  md:my-10"></div>
             </div>
 
-            <div className="md:flex block lg:px-0 px-16 lg:py-5">
-              <div className="  my-5 lg:px-8 px-0">
-              <div className="relative w-6 h-6 md:w-8 md:h-6  items-center flex justify-center">
-              <Image
+            <div className="md:flex block md:px-0  lg:py-5">
+            <div className=" md:px-10 md:py-0 py-4 flex flex-col">
+            <div className="relative w-6 h-6 md:w-8 md:h-8 items-center flex justify-center">
+                  <Image
                     src="/image/icons/image66.png"
                     fill
                     alt="Picture of the author"
@@ -93,18 +99,20 @@ export default function Home() {
                   />
                 </div>
 
-                <h5 className="mb-2 mt-2 lg:mt-6 lg:text-xl text-xs font-semibold  text-[#04374B]">
-                Corporate Training
+                <h5 className="    lg:text-[20px] md:text-[16px] text-[12px] lg:leading-[55px] md:leading-[45px] leading-[35px]  font-semibold  text-[#04374B]">
+                  Corporate Training
                 </h5>
-                <p className="mb-3 lg:text-sm text-[8px] font-normal text-[#365F6F] lg:leading-6 leading-3">
-                We can tailor our courses to your needs and create unique programmer that may include various workshops                </p>
+                <p className="lg:text-sm md:text-[9px] text-[12px] font-normal text-[#365F6F] lg:leading-6 leading-4">
+                  We can tailor our courses to your needs and create unique
+                  programmer that may include various workshops
+                </p>
               </div>
 
-              <div className=" md:border-r-2 border-b-2 border-[#CDCDCD] mx-2 md:mx-0 my-0  md:my-14"></div>
-              </div>
-            <div className="md:flex block lg:px-0 px-16 lg:py-5">
-            <div className="  my-5 lg:px-8 px-0">
-                <div className="relative w-6 h-6 md:w-8 md:h-6  items-center flex justify-center">
+              <div className=" md:border-r-2 border-b-2 border-[#CDCDCD] mx-2 md:mx-0 my-0  md:my-10"></div>
+            </div>
+            <div className="md:flex block md:px-0  lg:py-5">
+            <div className=" md:px-10 md:py-0 py-4 flex flex-col">
+            <div className="relative w-6 h-6 md:w-8 md:h-8 items-center flex justify-center">
                   <Image
                     src="/image/icons/image67.png"
                     fill
@@ -113,48 +121,49 @@ export default function Home() {
                   />
                 </div>
 
-                <h5 className="mb-2 mt-2 lg:mt-6 lg:text-xl text-xs font-semibold  text-[#04374B]">
-                Global Sourcing
+                <h5 className="    lg:text-[20px] md:text-[16px] text-[12px] lg:leading-[55px] md:leading-[45px] leading-[35px]  font-semibold  text-[#04374B]">
+                  Global Sourcing
                 </h5>
-                <p className="mb-3 lg:text-sm text-[8px] font-normal text-[#365F6F] lg:leading-6 leading-3">
-                We always deliver the best quality and performance for both our products and services.
+                <p className=" lg:text-sm md:text-[9px] text-[12px] font-normal text-[#365F6F] lg:leading-6 md:leading-4">
+                Exploiting global efficiencies in the delivery of our products and services.
                 </p>
               </div>
-
             </div>
           </div>
         </div>
       </section>
 
       {/* course */}
-      <section className="lg:px-[80px] px-[34px] sm:px-[47px] md:mt-32  lg:mt-56 mt-72  mb-10">
+      <section className="lg:px-[80px] px-[34px] sm:px-[47px] md:mt-20  lg:mt-56 mt-96  mb-10">
         <div className="flex items-center">
-          <div className="w-5 border-t-2 border-red-500 "></div>
+          <div className="w-14 border-t-2 border-[#DC272F] "></div>
 
-          <span className="lg:text-lg md:text-sm text-[8px] text-red-500 ms-3">OUR COURSE</span>
+          <span className="lg:text-lg text-sm  text-[#DC272F] ms-3">
+            OUR COURSE
+          </span>
         </div>
 
-        <div className="flex items-center">
-          <h2 className="lg:w-1/3 lg:text-2xl text-2xl font-semibold ">
+        <div className="flex items-end">
+          <h2 className="lg:w-1/2 md:w-1/3 w-3/5 text-lg  lg:text-[40px] lg:leading-[55px] md:text-2xl   font-semibold ">
             We Offer Bunce of Training & Coaching Program!
           </h2>
           <div className="flex-1"></div>
           <button
             type="button"
-            className="focus:outline-none  text-white bg-red-500 lg:block hidden   font-medium  text-sm px-5 py-2.5 mt-5 rounded-tr-lg rounded-b-lg"
+            className="focus:outline-none  text-white bg-[#DC272F] lg:block hidden   font-medium  text-sm px-5 py-3  rounded-tr-lg rounded-b-lg"
           >
-            Learn More
+           View all programs
           </button>
-          <div className="text-red-500 lg:hidden block pe-5">
+          <div className="text-[#DC272F] lg:hidden block ">
             <span>
               <IoIosArrowForward className="text-xl" />
             </span>
           </div>
         </div>
 
-        <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 mt-5">
-          <div className="relative p-6 ms-6 bg-white  rounded-lg border border-gray-300">
-            <div className="absolute -left-6  py-7 px-4  border-0   bg-[url('/image/Polygon.png')] bg-cover bg-center">
+        <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-y-3  md:gap-3 mt-5">
+          <div className="relative px-2 py-3  ms-[28px] bg-white  rounded-lg border border-gray-300">
+            <div className="absolute -left-[28px] top-10  py-6 px-4  border-0   bg-[url('/image/Polygon.png')] bg-cover bg-center">
               <div className="relative w-[20px] h-[20px]   ">
                 <Image
                   src="/image/icons/Frame4.png"
@@ -165,11 +174,11 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="ml-4">
-              <h2 className="text-[16px] font-semibold text-[#04374B]">
+            <div className="ml-5">
+              <h2 className="text-[18px] font-semibold text-[#04374B]">
                 CompEx Certification in Erbil, Iraq
               </h2>
-              <p className="text-[#365F6F] text-sm mt-1">
+              <p className="text-[#365F6F] text-sm  mt-1">
                 United Education has an excellent training facility
                 in Erbil (Kurdistan Region of Iraq) for professionals who would
                 like to achieve.
@@ -179,13 +188,13 @@ export default function Home() {
                 className="text-[#04374B] font-medium inline-flex items-center mt-3"
               >
                 Learn More
-                <FaArrowRight className="ml-1 h-4 w-4" />
+                <FaArrowRight className="ml-3 h-4 w-4" />
               </a>
             </div>
           </div>
-          <div className="relative p-6 ms-6 bg-white shadow rounded-lg border border-gray-300">
-          <div className="absolute -left-6  py-7 px-4  border-0   bg-[url('/image/Polygon.png')] bg-cover bg-center">
-          <div className="relative w-[20px] h-[20px]   ">
+          <div className="relative px-2 py-3  ms-[28px] bg-white  rounded-lg border border-gray-300">
+            <div className="absolute -left-[28px] top-10  py-6 px-4  border-0   bg-[url('/image/Polygon.png')] bg-cover bg-center">
+              <div className="relative w-[20px] h-[20px]   ">
                 <Image
                   src="/image/icons/Frame.png"
                   fill
@@ -195,11 +204,11 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="ml-4">
-              <h2 className="text-[16px] font-semibold text-[#04374B]">
-                Lifting Operations Courses
+            <div className="ml-5">
+            <h2 className="text-[18px] font-semibold text-[#04374B]">
+            Lifting Operations Courses
               </h2>
-              <p className="text-[#365F6F] text-sm mt-1">
+              <p className="text-[#365F6F] text-sm  mt-1">
                 These courses are suitable for anyone who is involved with
                 lifting operations. The course will provide participants with
                 the.
@@ -213,9 +222,9 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="relative p-6 ms-6 bg-white shadow rounded-lg border border-gray-300">
-          <div className="absolute -left-6  py-7 px-4  border-0   bg-[url('/image/Polygon.png')] bg-cover bg-center">
-          <div className="relative w-[20px] h-[20px]   ">
+          <div className="relative px-2 py-3  ms-[28px] bg-white  rounded-lg border border-gray-300">
+            <div className="absolute -left-[28px] top-10  py-6 px-4  border-0   bg-[url('/image/Polygon.png')] bg-cover bg-center">
+              <div className="relative w-[20px] h-[20px]   ">
                 <Image
                   src="/image/icons/Frame5.png"
                   fill
@@ -225,11 +234,11 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="ml-4">
-              <h2 className="text-[16px] font-semibold text-[#04374B]">
-                Well Design and Engineering
+            <div className="ml-5">
+            <h2 className="text-[18px] font-semibold text-[#04374B]">
+            Well Design and Engineering
               </h2>
-              <p className="text-[#365F6F] text-sm mt-1">
+              <p className="text-[#365F6F] text-sm  mt-1">
                 Well Design and Engineering integrates all major well design
                 technologies from pre-spud to TD. Participants are actively.
               </p>
@@ -242,9 +251,9 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="relative p-6 ms-6 bg-white shadow rounded-lg border border-gray-300">
-          <div className="absolute -left-6  py-7 px-4  border-0   bg-[url('/image/Polygon.png')] bg-cover bg-center">
-          <div className="relative w-[20px] h-[20px]   ">
+          <div className="relative px-2 py-3  ms-[28px] bg-white  rounded-lg border border-gray-300">
+            <div className="absolute -left-[28px] top-10  py-6 px-4  border-0   bg-[url('/image/Polygon.png')] bg-cover bg-center">
+              <div className="relative w-[20px] h-[20px]   ">
                 <Image
                   src="/image/icons/Frame 6.png"
                   fill
@@ -254,11 +263,11 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="ml-4">
-              <h2 className="text-[16px] font-semibold text-[#04374B]">
-                CompEx Certification in Erbil, Iraq
+            <div className="ml-5">
+            <h2 className="text-[18px] font-semibold text-[#04374B]">
+            CompEx Certification in Erbil, Iraq
               </h2>
-              <p className="text-[#365F6F] text-sm mt-1">
+              <p className="text-[#365F6F] text-sm  mt-1">
                 United Education has an excellent training facility
                 in Erbil (Kurdistan Region of Iraq) for professionals who would
                 like to achieve.
@@ -272,9 +281,9 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="relative p-6 ms-6 bg-white shadow rounded-lg border border-gray-300">
-          <div className="absolute -left-6  py-7 px-4  border-0   bg-[url('/image/Polygon.png')] bg-cover bg-center">
-          <div className="relative w-[20px] h-[20px]   ">
+          <div className="relative px-2 py-3 ms-[28px] bg-white  rounded-lg border border-gray-300">
+            <div className="absolute -left-[28px] top-10  py-6 px-4  border-0   bg-[url('/image/Polygon.png')] bg-cover bg-center">
+              <div className="relative w-[20px] h-[20px]   ">
                 <Image
                   src="/image/icons/Frame7.png"
                   fill
@@ -284,9 +293,9 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="ml-4">
-              <h2 className="text-[16px] font-semibold text-[#04374B]">
-                Lifting Operations Courses
+            <div className="ml-5">
+            <h2 className="text-[18px] font-semibold text-[#04374B]">
+            Lifting Operations Courses
               </h2>
               <p className="text-[#365F6F] text-sm mt-1">
                 These courses are suitable for anyone who is involved with
@@ -303,8 +312,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative p-6 ms-6 bg-white shadow rounded-lg border border-gray-300">
-             <div className="absolute -left-6  py-7 px-4  border-0   bg-[url('/image/Polygon.png')] bg-cover bg-center">
+          <div className="relative px-2 py-3  ms-[28px] bg-white  rounded-lg border border-gray-300">
+            <div className="absolute -left-[28px] top-10  py-6 px-4  border-0   bg-[url('/image/Polygon.png')] bg-cover bg-center">
               <div className="relative w-[20px] h-[20px]   ">
                 <Image
                   src="/image/icons/Frame8.png"
@@ -315,9 +324,9 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="ml-4">
-              <h2 className="text-[16px] font-semibold text-[#04374B]">
-                Well Design and Engineering
+            <div className="ml-5">
+            <h2 className="text-[18px] font-semibold text-[#04374B]">
+            Well Design and Engineering
               </h2>
               <p className="text-[#365F6F] text-sm mt-1">
                 Well Design and Engineering integrates all major well design
@@ -334,124 +343,137 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       {/* about */}
       <section className="flex flex-col-reverse  lg:flex-row lg:justify-center lg:px-[80px] px-[34px] sm:px-[47px]">
-        <div className="grid grid-rows-2 grid-flow-col  gap-3 w-full lg:mt-0 mt-5 lg:w-3/5">
-        <div className="  lg:col-span-1  col-span-2  md:order-1 order-2">
-          <div className="relative  w-full lg:h-full h-48 ">
-          <Image
-            src="/image/Rectangle114.png"
-            layout="fill"
-            objectFit="cover"
-            alt="Picture of the author"
-            className="object-cover rounded-2xl"
-          />
-        </div>
-
+        <div className="grid grid-rows-2 grid-flow-col  gap-3 w-full lg:mt-0 mt-5 lg:w-2/4">
+          <div className="  lg:col-span-1  col-span-2  md:order-1 order-2">
+            <div className="relative  w-full lg:h-full h-48 ">
+              <Image
+                src="/image/Rectangle114.png"
+                layout="fill"
+                objectFit="cover"
+                alt="Picture of the author"
+                className="object-cover rounded-2xl"
+              />
+            </div>
           </div>
           <div className="  lg:col-span-1  col-span-2  md:order-2 order-1">
-          <div className="relative  w-full h-full ">
-          <Image
-            src="/image/Rectangle115.png"
-            layout="fill"
-            objectFit="cover"
-            alt="Picture of the author"
-            className="object-cover rounded-2xl"
-          />
-        </div>
+            <div className="relative  w-full h-full ">
+              <Image
+                src="/image/Rectangle115.png"
+                layout="fill"
+                objectFit="cover"
+                alt="Picture of the author"
+                className="object-cover rounded-2xl"
+              />
+            </div>
           </div>
           <div className="row-span-2   md:order-3 order-3">
-          <div className="relative  w-full h-full ">
-          <Image
-            src="/image/Rectangle116.png"
-            layout="fill"
-            objectFit="cover"
-            alt="Picture of the author"
-            className="object-cover rounded-2xl"
-          />
-        </div>
+            <div className="relative  w-full h-full ">
+              <Image
+                src="/image/Rectangle116.png"
+                layout="fill"
+                objectFit="cover"
+                alt="Picture of the author"
+                className="object-cover rounded-2xl"
+              />
+            </div>
           </div>
         </div>
-        <div className="lg:w-2/5 w-full ms-5 ">
+        <div className="lg:w-2/4 w-full lg:ms-5 ">
           <div className="flex items-center">
-            <span className="text-lg text-red-500 mr-3">Abouts</span>
-            <div className="w-5 border-t-2 border-red-500 "></div>
+
+            <span className="lg:text-lg text-sm  text-[#DC272F] mr-3">ABOUT US</span>
+            <div className="w-14 border-t-2 border-[#DC272F] "></div>
           </div>
 
-          <div className=" flex lg:block">
-            <div className="lg:text-3xl flex-1 md:text-2xl text-xl lg:font-semibold font-medium lg:w-full w-1/2">
-              OUR REAL COMMITMENT REACHES BEYOND GAS & OIL COMPANY.
+          <div className=" flex lg:block ">
+          <div className=" text-lg lg:text-[40px] lg:leading-[55px] md:text-2xl font-semibold text-[#04374B] ">
+              Our Real Commitment Reaches Beyond Gas & Oil Company.
             </div>
-            <div className="text-red-500 lg:hidden   flex justify-end w-1/5 pe-5">
+            <div className="text-[#DC272F] lg:hidden   flex justify-end flex-1 ">
               <span>
                 <IoIosArrowForward className="text-xl" />
+                
               </span>
             </div>
           </div>
 
-          <p className="text-md mt-4 text-red-500">
+          <p className="text-base mt-4 font-medium text-[#DC272F]">
             UE is a private educational and training services provider,
             following huge educational and skill needs among our people that
             make it difficult for the country and nation to develop and cope
             with the rest of the world.
           </p>
-          <p className="mt-2 text-md text-[#365F6F]">
+          <p className="mt-2 text-base font-normal text-[#365F6F]">
             UE is specialized in educational and training services, ranging from
             language education, business skills development, and special
             technical and vocational training services.
           </p>
           <button
             type="button"
-            className="focus:outline-none text-white bg-red-500 lg:block hidden   font-medium  text-sm px-5 py-2.5 mt-5 rounded-tr-lg rounded-b-lg"
+            className="focus:outline-none text-white bg-[#DC272F] lg:block hidden   font-medium  text-sm px-5 py-3 mt-5 rounded-tr-lg rounded-b-lg"
           >
             Learn More
           </button>
         </div>
       </section>
 
-      
+
+
       {/* over all */}
-      <section className="bg-[url('/image/Rectangle5795.png')] bg-cover items-center h-64 mt-10  grid grid-cols-2 md:grid-cols-4">
-        <div className="  text-center">
-          <p className="text-3xl text-white">650+</p>
-          <p className="text-sm mt-4 text-[#E6EBEB]">Project Completed</p>
-        </div>
-        <div className="  text-center">
-          <p className="text-3xl text-white">200+</p>
-          <p className="text-sm mt-4 text-[#E6EBEB]">Team Engineers</p>
-        </div>
-        <div className="  text-center">
-          <p className="text-3xl text-white">300+</p>
-          <p className="text-sm mt-4 text-[#E6EBEB]">Clients Worldwide</p>
-        </div>
-        <div className="  text-center">
-          <p className="text-3xl text-white">10+</p>
-          <p className="text-sm mt-4 text-[#E6EBEB]">Years Of Experiences</p>
-        </div>
-      </section>
+      <section className="bg-[url('/image/Rectangle5795.png')] bg-cover items-center h-64 mt-10 grid grid-cols-2 md:grid-cols-4">
+  <div className="text-center">
+    <p className="text-5xl text-white font-bold">650+</p>
+    <p className="text-sm mt-4 text-[#E6EBEB]">Project Completed</p>
+    <div className="w-full border-b-4 ms-10 mt-4 border-[#049CB3] md:hidden"></div>
+  </div>
+  <div className="text-center md:border-l-4 border-[#049CB3]">
+    <p className="text-5xl text-white font-bold">200+</p>
+    <p className="text-sm mt-4 text-[#E6EBEB]">Team Engineers</p>
+    <div className="w-[90%] border-b-4 me-20 mt-4 border-[#049CB3] md:hidden"></div>
+  </div>
+  <div className="text-center md:border-l-4 border-[#049CB3]">
+    <p className="text-5xl text-white font-bold">300+</p>
+    <p className="text-sm mt-4 text-[#E6EBEB]">Clients Worldwide</p>
+  </div>
+  <div className="text-center md:border-l-4 border-[#049CB3]">
+    <p className="text-5xl text-white font-bold">10+</p>
+    <p className="text-sm mt-4 text-[#E6EBEB]">Years Of Experiences</p>
+  </div>
+</section>
 
 
       {/* our service */}
       <section className="lg:px-[80px] px-[34px] sm:px-[47px] mt-10">
         <div className="flex items-center">
-          <div className="w-5 border-t-2 border-red-500 "></div>
+      
+          <div className="w-14 border-t-2 border-[#DC272F] "></div>
 
-          <span className="text-lg text-red-500 ms-3">Our Services</span>
+          <span className="lg:text-lg text-sm  text-[#DC272F] ms-3">OUR SERVICES</span>
         </div>
-        <div className="flex items-center">
-          <h2 className="flex-1 lg:text-3xl text-2xl font-semibold">
-            We Provide Best Services
+        
+
+<div className="flex items-end">
+          <h2 className="lg:w-1/2 md:w-1/3 w-3/5 text-lg  lg:text-[40px] lg:leading-[55px] md:text-2xl   font-semibold ">
+          We Provide Best Services
           </h2>
+          <div className="flex-1"></div>
           <button
             type="button"
-            className="focus:outline-none  text-white bg-red-500 lg:block hidden   font-medium  text-sm px-5 py-2.5 mt-5 rounded-tr-lg rounded-b-lg"
+            className="focus:outline-none  text-white bg-[#DC272F] lg:block hidden   font-medium  text-sm px-5 py-3  rounded-tr-lg rounded-b-lg"
           >
-            Learn More
+           Learn More
           </button>
+          <div className="text-[#DC272F] lg:hidden block ">
+            <span>
+              <IoIosArrowForward className="text-xl" />
+            </span>
+          </div>
         </div>
         <div className="grid lg:grid-cols-4 gap-5 sm:grid-cols-3">
           <div className=" px-6 bg-[#F7F7F7]   rounded-xl shadow my-5">
-         
             <div className="w-10 h-10 bg-[#04374B] items-center flex justify-center">
               <Image
                 src="/image/icons/Frame.png"
@@ -477,12 +499,9 @@ export default function Home() {
               Read more
               <IoIosArrowRoundForward className="text-2xl ms-1" />
             </Link>
-          
-           
           </div>
 
           <div className=" px-6 bg-[#F7F7F7]   rounded-xl shadow my-5">
-        
             <div className="w-10 h-10 bg-[#04374B] items-center flex justify-center">
               <Image
                 src="/image/icons/Frame1.png"
@@ -494,7 +513,7 @@ export default function Home() {
             </div>
 
             <h5 className="mb-2 mt-6 text-lg font-bold tracking-tight text-[#04374B] ">
-            Horizontal & Multilateral Technology
+              Horizontal & Multilateral Technology
             </h5>
 
             <p className="mb-3 text-sm font-normal text-[#365F6F] leading-6">
@@ -511,7 +530,6 @@ export default function Home() {
             </Link>
           </div>
           <div className=" px-6 bg-[#F7F7F7]   rounded-xl shadow my-5">
-        
             <div className="w-10 h-10 bg-[#04374B] items-center flex justify-center">
               <Image
                 src="/image/icons/Frame2.png"
@@ -523,14 +541,14 @@ export default function Home() {
             </div>
 
             <h5 className="mb-2 mt-6 text-lg font-bold tracking-tight text-[#04374B] ">
-            Preparation of Well Programmes
+              Preparation of Well Programmes
             </h5>
 
             <p className="mb-3 text-sm font-normal text-[#365F6F] leading-6">
               From applied literature to educational resources, we have a lot of
               textbooks to offer.
             </p>
-           
+
             <Link
               href="#"
               className="inline-flex items-center  py-2 text-sm font-medium text-center mb-10 "
@@ -540,7 +558,6 @@ export default function Home() {
             </Link>
           </div>
           <div className=" px-6 bg-[#F7F7F7]   rounded-xl shadow my-5">
-          
             <div className="w-10 h-10 bg-[#04374B] items-center flex justify-center">
               <Image
                 src="/image/icons/Frame3.png"
@@ -552,14 +569,14 @@ export default function Home() {
             </div>
 
             <h5 className="mb-2 mt-6 text-lg font-bold tracking-tight text-[#04374B] ">
-            Data Mining
+              Data Mining
             </h5>
 
             <p className="mb-3 text-sm font-normal text-[#365F6F] leading-6">
               From applied literature to educational resources, we have a lot of
               textbooks to offer.
             </p>
-           
+
             <Link
               href="#"
               className="inline-flex items-center  py-2 text-sm font-medium text-center mb-10"
@@ -574,14 +591,15 @@ export default function Home() {
       <section className="bg-[#14516A] gap-8 max-h-[835px] md:flex lg:px-[80px] px-[34px] sm:px-[47px] lg:py-[40px] py-[17px] sm:py-[24px] mt-10">
         <div className="md:w-1/2 w-full">
           <div className="flex items-center">
-            <div className="w-12 border-t-2 text-white"></div>
-            <span className="text-sm text-white font-extralight ms-3">
+           
+            <span className="text-sm text-white font-extralight me-3">
               OUR MISSION & VISION
             </span>
+            <div className="w-16 border-t-2 text-white"></div>
           </div>
           <div className="mt-5 text-white">
-            <h2 className="text-2xl">Our Mission</h2>
-            <h3 className="text-xl font-extralight mt-8 hidden lg:block">
+            <h2 className="text-2xl">Our Vision </h2>
+            <h3 className="text-xl font-semibold mt-8 hidden lg:block">
               UNITED EDUCATION
             </h3>
             <p className="font-extralight lg:text-lg md:text-sm text-[8px] lg:leading-7 leading-4 mt-2">
@@ -590,8 +608,8 @@ export default function Home() {
               themselves and the whole nation by been powerful producible human
               resources.
             </p>
-            <h2 className="text-2xl mt-5">Our Vision</h2>
-            <h3 className="text-xl font-extralight mt-8 hidden lg:block">
+            <h2 className="text-2xl mt-5">Our Mission</h2>
+            <h3 className="text-xl font-semibold mt-8 hidden lg:block">
               UNITED EDUCATION
             </h3>
 
@@ -617,18 +635,26 @@ export default function Home() {
       </section>
 
       <section className="lg:px-[80px] px-[34px] sm:px-[47px] my-10 ">
+        <div className="flex lg:flex-col flex-row justify-between items-center" >
         <div className="text-center">
           <div className="flex justify-center items-center">
-            <div className="w-10 border-t-2 border-red-500 "></div>
+            <div className="lg:w-10 border-t-2 border-[#DC272F] w-16 "></div>
 
-            <span className="text-sm text-red-500 mx-3">Latest News</span>
-            <div className="w-10 border-t-2 border-red-500 "></div>
+            <span className="text-lg text-[#DC272F] mx-3">LATEST NEWS</span>
+            <div className="w-10 border-t-2 border-[#DC272F] lg:block hidden "></div>
           </div>
 
-          <h2 className="flex-1 lg:text-2xl text-xl font-semibold">
+          <h2 className="flex-1 lg:text-[40px] mt-2 text-xl font-semibold">
             Our Latest Blogs
           </h2>
         </div>
+        <div className="text-[#DC272F] lg:hidden block ">
+            <span>
+              <IoIosArrowForward className="text-xl" />
+            </span>
+          </div>
+        </div>
+       
 
         <div className="grid lg:grid-cols-3 gap-5 sm:grid-cols-3">
           <div className="     rounded-xl  my-5">
@@ -651,7 +677,7 @@ export default function Home() {
             </p>
             <Link
               href="#"
-              className="inline-flex items-center  text-red-500 py-2 text-sm font-medium text-center mb-10 "
+              className="inline-flex items-center  text-[#DC272F] py-2 text-sm font-medium text-center mb-10 "
             >
               Read more
               <IoIosArrowRoundForward className="text-2xl ms-1" />
@@ -678,7 +704,7 @@ export default function Home() {
             </p>
             <Link
               href="#"
-              className="inline-flex items-center  text-red-500 py-2 text-sm font-medium text-center mb-10 "
+              className="inline-flex items-center  text-[#DC272F] py-2 text-sm font-medium text-center mb-10 "
             >
               Read more
               <IoIosArrowRoundForward className="text-2xl ms-1" />
@@ -704,7 +730,7 @@ export default function Home() {
             </p>
             <Link
               href="#"
-              className="inline-flex items-center  text-red-500 py-2 text-sm font-medium text-center mb-10 "
+              className="inline-flex items-center  text-[#DC272F] py-2 text-sm font-medium text-center mb-10 "
             >
               Read more
               <IoIosArrowRoundForward className="text-2xl ms-1" />
@@ -714,7 +740,7 @@ export default function Home() {
         <div className=" flex justify-center items-center">
           <button
             type="button"
-            className="focus:outline-none text-white bg-red-500 lg:block hidden   font-medium  text-sm px-5 py-2.5  rounded-tr-lg rounded-b-lg"
+            className="focus:outline-none lg:block text-white bg-[#DC272F]  hidden   font-medium  text-sm px-5 py-2.5  rounded-tr-lg rounded-b-lg"
           >
             View All Blogs
           </button>
@@ -730,7 +756,7 @@ export default function Home() {
             <span className="text-sm text-[#365F6F]  mx-6">
               {" "}
               We provide best health care for your family. We are giving the
-              best treatment services.{" "}
+              best treatment services.
             </span>
           </div>
           <form action="" className="mt-5 font-extralight">
@@ -748,7 +774,7 @@ export default function Home() {
                   name="name"
                   placeholder="John Doe"
                   required
-                  className="w-full px-3  border rounded-md bg-[#F6F0F0] p-4"
+                  className="w-full px-3  border rounded-md bg-[#F6F0F0] p-4 focus:outline-none"
                 />
               </div>
               <div className="">
@@ -764,7 +790,7 @@ export default function Home() {
                   name="name"
                   placeholder="John Doe"
                   required
-                  className="w-full px-3  border rounded-md bg-[#F6F0F0] p-4"
+                  className="w-full px-3  border rounded-md bg-[#F6F0F0] p-4 focus:outline-none"
                 />
               </div>
               <div className="">
@@ -780,7 +806,7 @@ export default function Home() {
                   name="name"
                   placeholder="Phone Number"
                   required
-                  className="w-full px-3  border rounded-md bg-[#F6F0F0] p-4"
+                  className="w-full px-3  border rounded-md bg-[#F6F0F0] p-4 focus:outline-none"
                 />
               </div>
               <div className="">
@@ -796,7 +822,7 @@ export default function Home() {
                   name="name"
                   placeholder="Enter your Email"
                   required
-                  className="w-full px-3  border rounded-md bg-[#F6F0F0] p-4"
+                  className="w-full px-3  border rounded-md bg-[#F6F0F0] p-4 focus:outline-none"
                 />
               </div>
             </div>
@@ -814,7 +840,7 @@ export default function Home() {
                 rows="4"
                 placeholder="Type somthing?"
                 required
-                className="w-full px-3 text-sm border rounded-md bg-[#F6F0F0] p-4"
+                className="w-full px-3 text-sm border rounded-md bg-[#F6F0F0] p-4 focus:outline-none"
               ></textarea>
             </div>
             <div className=" grid grid-cols-2 md:hidden ">
@@ -853,8 +879,8 @@ export default function Home() {
           </form>
         </div>
       </section>
-      <section className="lg:px-[80px]   px-[34px] sm:px-[47px] grid sm:grid-cols-5 grid-cols-2 gap-5 py-10">
-        <div className="relative flex justify-center  items-center lg:w-[160px] lg:h-[48px] w-[105px]  md:h-[38px]  h-[30px] ">
+      <section className="lg:px-[80px]   px-[34px] sm:px-[47px] grid md:grid-cols-5 grid-cols-2 gap-5 py-10">
+        <div className="relative   items-center lg:w-[160px] lg:h-[48px] w-[105px]  md:h-[38px]  h-[30px] mx-auto">
           <Image
             src="/image/Page-1.png"
             fill
@@ -862,7 +888,7 @@ export default function Home() {
             className=""
           />
         </div>
-        <div className="relative lg:w-[160px] lg:h-[48px] w-[105px] md:h-[38px]  h-[30px] ">
+        <div className="relative lg:w-[160px] lg:h-[48px] w-[105px] md:h-[38px]  h-[30px] mx-auto">
           <Image
             src="/image/Logo5.png"
             fill
@@ -870,7 +896,7 @@ export default function Home() {
             className=""
           />
         </div>
-        <div className="relative lg:w-[160px] lg:h-[48px] w-[105px] md:h-[38px]  h-[30px] ">
+        <div className="relative lg:w-[160px] lg:h-[48px] w-[105px] md:h-[38px]  h-[30px] mx-auto">
           <Image
             src="/image/6.png"
             fill
@@ -878,7 +904,7 @@ export default function Home() {
             className=""
           />
         </div>
-        <div className="relative lg:w-[160px] lg:h-[48px] w-[105px] md:h-[38px]  h-[30px] ">
+        <div className="relative lg:w-[160px] lg:h-[48px] w-[105px] md:h-[38px]  h-[30px] mx-auto">
           <Image
             src="/image/9.png"
             fill
@@ -886,6 +912,7 @@ export default function Home() {
             className=""
           />
         </div>
+        <div className="md:col-span-1 col-span-2  flex justify-center ">
         <div className="relative lg:w-[160px] lg:h-[48px] w-[105px] md:h-[38px]  h-[30px] ">
           <Image
             src="/image/10.png"
@@ -894,6 +921,8 @@ export default function Home() {
             className=""
           />
         </div>
+        </div>
+      
       </section>
     </main>
   );

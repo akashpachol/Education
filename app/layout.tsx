@@ -26,9 +26,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={plusChakarthaSans.className}>
-        <nav className="bg-white flex justify-center   lg:h-[60px] md:h-[54px]  h-[50px] md:py-2 py-1   lg:px-[100px]  md:px-[42px] px-[34px]">
-          <div className="container  flex flex-nowrap justify-between items-center  ">
-            <div className=" w-[60px] h-[30px] relative ">
+        <nav className="bg-white flex justify-center   lg:h-[60px] md:h-[54px]  h-[50px] md:py-2 py-1   lg:px-[80px]  md:px-[42px] px-[34px]">
+          <div className="container  flex flex-nowrap justify-between items-center">
+            <div className=" w-[50px] h-[30px] relative ">
               <Image
                 src="/image/icons/logo1.png"
                  fill
@@ -41,55 +41,54 @@ export default function RootLayout({
               <button
                 id="menu-toggle"
                 type="button"
-                className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg hover:bg-gray-100   md:hidden"
+                className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg hover:bg-gray-100   lg:hidden"
               >
                 <IoReorderThree className="text-[45px]" />
               </button>
             </div>
 
             <div
-              className="flex-1 md:block md:w-auto hidden "
+              className="flex-1 lg:block md:w-auto hidden "
          
             >
-              <ul className="flex flex-col mt-4 md:flex-row md:justify-end md:space-x-8 md:mt-0 md:text-sm md:font-medium">
-                <li className="flex justify-between">
+              <ul className="flex flex-col  lg:flex-row lg:justify-end   md:text-sm  ">
+                
                   <Link
                     href="/contact"
-                    className="flex py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50  md:border-0  md:p-0   "
+                    className="flex     text-gray-700   mx-2 xl:mx-6 "
                   >
                     <MdMailOutline className="w-5 h-5 text-red-500" />
-                    <div className="ms-4">
-                      <p className="text-red-500 text-sm">Email</p>
-                      <p className="text-black text-xs">
+                    <div className="ms-4 ">
+                      <p className="text-red-500 lg:text-sm  font-medium">Email</p>
+                      <p className="text-black lg:text-xs font-normal">
                         info@united-education.com
                       </p>
                     </div>
                   </Link>
                   <Link
                     href="/contact"
-                    className="flex py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50  md:border-0  md:p-0   "
+                    className="flex   text-gray-700   mx-2  xl:mx-6 "
                   >
                     <FiPhone className="w-5 h-5 text-red-500" />
                     <div className="ms-4">
-                      <p className="text-red-500 text-sm">Call Us</p>
-                      <p className="text-black text-xs">+964 751 762 7727</p>
+                      <p className="text-red-500 lg:text-sm font-medium">Call Us</p>
+                      <p className="text-black lg:text-xs font-normal">+964 751 762 7727</p>
                     </div>
                   </Link>
                   <Link
                     href="/contact"
-                    className="flex py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50  md:border-0  md:p-0   "
+                    className="flex   text-gray-700    mx-2  xl:mx-6 "
                   >
                     <IoLocationOutline className="w-5 h-5 text-red-500" />
                     <div className="ms-4">
-                      <p className="text-red-500 text-sm">Location</p>
-                      <p className="text-black text-xs">
+                      <p className="text-red-500 lg:text-sm font-medium">Location</p>
+                      <p className="text-black lg:text-xs font-normal">
                         Erbil, Empire Business Tower, Tower 4, Floor 15, Office
                         NO 1
                       </p>
                     </div>
                   </Link>
-                </li>
-              </ul>
+                </ul>
             </div>
           </div>
         </nav>
@@ -98,8 +97,8 @@ export default function RootLayout({
         </div>
 
 
-<footer className="w-full   bg-[#022837]  lg:px-[80px] px-[34px] sm:px-[47px] ">
-          <div className="container  flex   w-full  lg:flex-row flex-col  py-24   md:items-start ">
+<footer className="w-full   bg-[#022837]  lg:px-[80px] px-[34px] sm:px-[47px]   ">
+          <div className="container  flex mx-auto   w-full  lg:flex-row flex-col  py-24   md:items-start ">
             <div className="flex md:justify-between  flex-col md:flex-row lg:flex-col w-full  lg:w-72 lg:mx-0 items-center md:items-start">
               <Link href={""}>
                 <Image
