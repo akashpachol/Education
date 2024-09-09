@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Manrope, Plus_Jakarta_Sans } from "next/font/google";
 import { IoReorderThree, IoLocationOutline } from "react-icons/io5";
 import { MdMailOutline } from "react-icons/md";
 import Link from "next/link";
@@ -7,11 +6,27 @@ import Image from "next/image";
 import "./globals.css";
 import { FiPhone } from "react-icons/fi";
 import { FaArrowRight } from "react-icons/fa6";
-const plusChakarthaSans = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  preload: false,
-});
-const manRopr = Manrope({ subsets: ["latin"], preload: false });
+
+import { Manrope, Plus_Jakarta_Sans } from "next/font/google";
+
+
+
+ 
+
+// const manRopr = Manrope({ subsets: ["latin"], preload: false });
+
+ 
+const manrope = Manrope({
+  subsets: ['latin'],
+  variable: '--font-manrope',
+  display: 'swap',
+})
+ 
+const plus_Jakarta_Sans = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  variable: '--font-plus-Jakarta-Sans',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,8 +39,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={plusChakarthaSans.className}>
+    <html lang="en" className={`${plus_Jakarta_Sans.variable} ${manrope.variable}`}>
+      <body >
         <nav className="bg-white flex justify-center   lg:h-[60px] md:h-[54px]  h-[50px] md:py-2 py-1   lg:px-[80px]  md:px-[42px] px-[34px]">
           <div className="container  flex flex-nowrap justify-between items-center">
             <div className=" w-[50px] h-[30px] relative ">
@@ -60,9 +75,9 @@ export default function RootLayout({
                     <MdMailOutline className="w-5 h-5 text-red-500" />
                     <div className="ms-4 ">
                       <p className="text-red-500 lg:text-sm  font-medium">Email</p>
-                      <p className="text-black lg:text-xs font-normal">
+                      <h6 className={`${manrope.className} text-black lg:text-xs font-normal`}>
                         info@united-education.com
-                      </p>
+                      </h6>
                     </div>
                   </Link>
                   <Link
@@ -72,7 +87,8 @@ export default function RootLayout({
                     <FiPhone className="w-5 h-5 text-red-500" />
                     <div className="ms-4">
                       <p className="text-red-500 lg:text-sm font-medium">Call Us</p>
-                      <p className="text-black lg:text-xs font-normal">+964 751 762 7727</p>
+                      <h6 className={`${manrope.className} text-black lg:text-xs font-normal`}>
+                        +964 751 762 7727</h6>
                     </div>
                   </Link>
                   <Link
@@ -82,10 +98,10 @@ export default function RootLayout({
                     <IoLocationOutline className="w-5 h-5 text-red-500" />
                     <div className="ms-4">
                       <p className="text-red-500 lg:text-sm font-medium">Location</p>
-                      <p className="text-black lg:text-xs font-normal">
+                      <h6 className={`${manrope.className} text-black lg:text-xs font-normal`}>
                         Erbil, Empire Business Tower, Tower 4, Floor 15, Office
                         NO 1
-                      </p>
+                      </h6>
                     </div>
                   </Link>
                 </ul>
@@ -122,7 +138,7 @@ export default function RootLayout({
                 </div>
               </div>
             </div>
-            <div className="flex flex-wrap md:flex-nowrap text-center justify-between md:ms-8 ms:0 w-full mt-5  lg:mt-0  md:text-left">
+            <div className="flex flex-wrap md:flex-nowrap text-center justify-between lg:ms-32 ms:0 w-full mt-8  lg:mt-0  md:text-left">
               <div className="w-full px-4 ">
                 <h2 className="mb-3 lg:text-xl sm:text-lg text-lg font-medium text-white ">
                   About

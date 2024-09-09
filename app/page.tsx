@@ -15,7 +15,7 @@ export default function Home() {
   };
   return (
     <main className="min-h-screen ">
-      <section className="relative w-full md:h-[650px] h-[550px]">
+      <section className="relative w-full md:h-[650px] h-[500px]">
         <div className="absolute inset-0 ">
           <Image
             src="/image/Rectangle5788.png"
@@ -35,7 +35,7 @@ export default function Home() {
               <div className="flex items-center justify-center ">
                 <div className="md:w-10 w-16 md:border-t border-t-2 border-white"></div>
 
-                <span className="lg:text-[18px] md:text-[12px] text-[10px] text-white font-normal mx-3  leading-[50px] ">
+                <span className={`lg:text-[18px] md:text-[12px] text-[10px] text-white font-normal mx-3  leading-[50px] `}>
                   WELCOME TO UNITED EDUCATION
                 </span>
 
@@ -138,9 +138,9 @@ export default function Home() {
         <div className="flex items-center">
           <div className="w-14 border-t-2 border-[#DC272F] "></div>
 
-          <span className="lg:text-lg text-sm  text-[#DC272F] ms-3">
+          <p className="lg:text-lg text-sm  text-[#DC272F] ms-3">
             OUR COURSE
-          </span>
+          </p>
         </div>
 
         <div className="flex items-end">
@@ -384,14 +384,14 @@ export default function Home() {
         <div className="lg:w-2/4 w-full lg:ms-5 ">
           <div className="flex items-center">
 
-            <span className="lg:text-lg text-sm  text-[#DC272F] mr-3">ABOUT US</span>
+            <p className="lg:text-lg text-sm  text-[#DC272F] mr-3">ABOUT US</p>
             <div className="w-14 border-t-2 border-[#DC272F] "></div>
           </div>
 
           <div className=" flex lg:block ">
-          <div className=" text-lg lg:text-[40px] lg:leading-[55px] md:text-2xl font-semibold text-[#04374B] ">
+          <h1 className=" text-lg lg:text-[40px] lg:leading-[55px] md:text-2xl font-semibold text-[#04374B] ">
               Our Real Commitment Reaches Beyond Gas & Oil Company.
-            </div>
+            </h1>
             <div className="text-[#DC272F] lg:hidden   flex justify-end flex-1 ">
               <span>
                 <IoIosArrowForward className="text-xl" />
@@ -451,7 +451,7 @@ export default function Home() {
       
           <div className="w-14 border-t-2 border-[#DC272F] "></div>
 
-          <span className="lg:text-lg text-sm  text-[#DC272F] ms-3">OUR SERVICES</span>
+          <p className="lg:text-lg text-sm  text-[#DC272F] ms-3">OUR SERVICES</p>
         </div>
         
 
